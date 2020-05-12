@@ -7,6 +7,6 @@ class MyTestCase(unittest.TestCase):
     def test_complex_function(self):
         production_class = ProductionClass()
         #przypisujemy wynik tej funkci intermediate przez tego Mocka (XD)
-        production_class.intermediate_function = MagicMock(return_value=2)
+        production_class.intermediate_function = MagicMock(return_value=3)
         self.assertEqual(4, production_class.complex_function())
 
