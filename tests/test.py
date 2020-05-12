@@ -10,9 +10,14 @@ class TestSum(unittest.TestCase):
         print('Chyba się udało!')
 
     def test_list_fraction(self):
-        data = [Fraction(1, 4), Fraction(1, 4), Fraction(2, 5)]
+        data = [Fraction(1, 4), Fraction(1, 4), Fraction(1, 2)]
         result = sum(data)
         self.assertEquals(result, 1)
+
+    def test_bad_type(self):
+        data = 'banana'
+        with self.assertRaises(TypeError):
+            sum(data)
 
 
 
